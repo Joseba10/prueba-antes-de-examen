@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-uno',
@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class UnoComponent implements OnInit {
 
 nombre:string;
-id :string;
+id :number;
+texto:string;
 
   constructor() {
 
@@ -22,13 +23,13 @@ id :string;
 
   mostrar(){
 
-if (this.id=="5"){
-
+if (this.id==5){
+this.texto="Se ha encontrado un registro";
   console.log("funciona");
 
 }
 else{
-
+  this.texto="No se ha encontrado ningun registro";
   console.log("no funciona");
 
 }
