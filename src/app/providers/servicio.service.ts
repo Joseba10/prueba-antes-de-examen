@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-const END_POINT = "192.168.99.1:3000/todos";
+import { HttpClient } from '@angular/common/http';
+import { GLOBAL } from '../global';
+
+
 @Injectable()
 export class ServicioService {
+  
+
+  constructor(public http: HttpClient) {
+
+    console.log('TodosService constructor');
+  }
 
 
-  constructor() { }
 
-}
-/*
 getTodos():Observable<any>{
-  let url = END_POINT + '/todos';
+
+  let url = GLOBAL.endpoint + '/todos';
   console.log(`TodosService getTodos ${url}`);
 
   return this.http.get(url);
 
-}*/
+}
+
+}
